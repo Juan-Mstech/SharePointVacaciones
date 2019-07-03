@@ -1,0 +1,12 @@
+{
+    "sourceDirectory": "src",
+    "sharePointSiteUrl": "http://10.0.2.17:9001",
+    "publishingScope": "SaveOnly",
+    "authenticationType": "NTLM",
+    "remoteFolders":[
+        "/_catalogs/masterpage/",
+        "/SiteAssets/JS",
+        "/SiteAssets/HTML",
+        "/SitePages"
+    ]
+}
