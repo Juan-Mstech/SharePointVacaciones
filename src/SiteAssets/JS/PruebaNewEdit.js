@@ -30,10 +30,10 @@ function CargarDetalle() {
         headers: { "Accept": "application/json;odata=verbose" }
     }).then(function (data) {
         if (data.d != null) {
-                var option = $('<option>').val(data.d.Title).text(data.d.Title);
+            var option = $('<option>').val(data.d.Title).text(data.d.Title);
 
-                $('#ddlDetalle').append($(option));
-            
+            $('#ddlDetalle').append($(option));
+
             swal.close();
         }
         else {
