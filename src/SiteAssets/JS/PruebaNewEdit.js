@@ -30,10 +30,10 @@ function CargarDetalle() {
         headers: { "Accept": "application/json;odata=verbose" }
     }).then(function (data) {
         if (data.d != null) {
-            var option = $('<option>').val(data.d.Title).text(data.d.Title);
+          
 
-            $('#ddlDetalle').append($(option));
-
+            $('#inEmpleado').val(data.d.Title);
+            $('#inSupervisor').val(data.d.Title);
             swal.close();
         }
         else {
@@ -43,6 +43,15 @@ function CargarDetalle() {
         function (error) {
             swal('Error', 'Se produjo un error al recuperar el detalle', 'error');
         });
+
+
+
+
+
+   
+
+
+
 }
 
 function Guardar() {
