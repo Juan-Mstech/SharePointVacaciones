@@ -46,17 +46,30 @@ function CargarDetalle() {
 
 
 
+}
 
 
-   
-
-
+function calculaDiasHab(){
 
 }
 
+
+
+function superposicionDias(){
+
+}
+
+
+
+function descontarDias(){
+
+}
+
+
+
 function Guardar() {
     $('#divBotonera').hide();
-
+//modificar los datos que siguen
     var item = {
         "__metadata": { "type": "SP.Data.PruebaListItem" },
         "Title": $('#inTitulo').val(),
