@@ -46,8 +46,8 @@ function CargarDetalle() {
 }
 
 function Guardar() {
-    $('#divBotonera').hide();
-    //====================================================================================
+    $('#divBotonera').hide(); 
+//====================================================================================
 
     var item = {
         "__metadata": { "type": "SP.Data.SolicitudesVacacionesListItem" },
@@ -121,9 +121,8 @@ function Guardar() {
             return false;
         }
     });
-    //-------------------------------------------------------------------------------------
 }
-
+//===============================================================================================
 function Cancelar() {
     this.location.href = decodeURIComponent(source);
 }
@@ -132,10 +131,6 @@ function calcularDiasCorridos() {
     var desde = document.getElementById("inDesdeFecha");
     var hasta = document.getElementById("inHastaFecha");
     var dias = 0;
-
-
-
-
 
     if (desde != undefined && hasta != undefined && desde.value <= hasta.value) {
         var convDesde = new Date(desde.value);
@@ -146,8 +141,7 @@ function calcularDiasCorridos() {
 
     document.getElementById("inDPedidos").value = dias;
 
-
-
+    // -- Cálculo de días laborales --
     var acum = 0;
     var fecha = new Date($(desde).val());
 
@@ -162,6 +156,4 @@ function calcularDiasCorridos() {
 
     }
     document.getElementById("inDDisponibles").value = acum;
-
-
 }
