@@ -134,8 +134,7 @@ function calcularDiasCorridos() {
     var dias = 0;
 
 
-    var d = new Date();
-    var acum = 0;
+
 
 
     if (desde != undefined && hasta != undefined && desde.value <= hasta.value) {
@@ -147,35 +146,22 @@ function calcularDiasCorridos() {
 
     document.getElementById("inDPedidos").value = dias;
 
+
+
+    var acum = 0;
+    var fecha = new Date($(desde).val());
+
+    for (var i = 0; i < dias; i++) {
+        fecha.setDate(fecha.getDate() + dias + 1);
+       
+        
+        if (fecha.getDay() != 0 && fecha.getDay() != 6) {
+           acum++;
+        }
+        else { continue; }
+
+    }
+    document.getElementById("inDDisponibles").value = acum;
+
+
 }
-
-//for(var i=0; i<=dias; i++){
-
-
-    //     if(desde.value == desde.getDay(0) || desde.value == desde.getDay(6) ||
-    //     hasta.value == hasta.getDay(0) || hasta.value == hasta.getDay(6)){
-    //        continue;
-    //     }
-    //     else { acum++; }
-    //}
-  //  alert(typeof(desde));
-    //document.getElementById("inDDisponibilidad").value = acum;
-//}
-
-
-// var Xmas95 = new Date('December 25, 1995 23:15:30');
-// var weekday = Xmas95.getDay();
-
-// console.log(weekday); //
-
-// for (i = 1; i <= diasEntreLasFechas, i++) {
-//     var habiles = 0
-//     var fechaAevaluar = fechaDesde.AddDays(i)
-//     if (fechaAEvaluar != sabado && fechaAEvaluar != domingo) {
-//         habiles = habiles + 1
-//     }
-
-
-// }
-
-// document.getElementByID("idDelContadorHabiles").value = habiles
